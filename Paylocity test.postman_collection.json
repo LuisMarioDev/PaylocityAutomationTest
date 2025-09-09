@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "920ef70f-88da-4f47-b7a6-bcdf518e4a13",
+		"name": "Paylocity test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23566788"
+	},
+	"item": [
+		{
+			"name": "Listado",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Empleaod",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic VGVzdFVzZXI3OTY6aUNrIzs+IXEna2RM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"firstName\": \"Kevin\",\n  \"lastName\": \"Durant\",\n  \"username\": \"kdurant\",\n  \"dependants\": 2,\n  \"salary\": 2000\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wmxrwq14uc.execute-api.us-east-1.amazonaws.com/Prod/api/Employees",
+					"protocol": "https",
+					"host": [
+						"wmxrwq14uc",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"Prod",
+						"api",
+						"Employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Empleado",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic VGVzdFVzZXI3OTY6aUNrIzs+IXEna2RM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"a6692f26-23ec-4fbd-a89a-a363cc27ff00\",\n  \"firstName\": \"Kevin Updated\",\n  \"lastName\": \"Durant been updated\",\n  \"username\": \"kdurantupdated\",\n  \"dependants\": 3,\n  \"salary\": 2000\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wmxrwq14uc.execute-api.us-east-1.amazonaws.com/Prod/api/Employees",
+					"protocol": "https",
+					"host": [
+						"wmxrwq14uc",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"Prod",
+						"api",
+						"Employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Empleado",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic VGVzdFVzZXI3OTY6aUNrIzs+IXEna2RM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://wmxrwq14uc.execute-api.us-east-1.amazonaws.com/Prod/api/Employees/77609a66-c435-4ce7-bc50-05e2c22613f4",
+					"protocol": "https",
+					"host": [
+						"wmxrwq14uc",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"Prod",
+						"api",
+						"Employees",
+						"77609a66-c435-4ce7-bc50-05e2c22613f4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
