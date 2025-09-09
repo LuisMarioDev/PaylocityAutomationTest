@@ -57,7 +57,7 @@ public class CreateEmployee extends RestAssured.CreateEmployee {
 
         assertThat(response.body().jsonPath().getString("dependants"))
                 .as("The dependants don't match")
-                .isEqualTo(EMPLOYEE_DEPENDENTS);
+                .isEqualTo(EMPLOYEE_DEPENDENTS.toString());
 
     }
 

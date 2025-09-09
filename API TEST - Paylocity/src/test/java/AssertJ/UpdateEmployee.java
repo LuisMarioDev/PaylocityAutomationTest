@@ -19,8 +19,18 @@ public class UpdateEmployee extends RestAssured.UpdateEmployee {
     public void testupdateEmployee() {
         Response response = updateEmployee.actualizarTablero();
 
-        assertThat(response.getStatusCode()).as("La respuesta debe de ser 200").isEqualTo(200);
-        assertThat(response.jsonPath().getString("name")).as("El nombre deberia ser" + EMPLOYEE_FIRSTNAME).isEqualTo(EMPLOYEE_FIRSTNAME);
-        assertThat(response.jsonPath().getString("id")).as("El idOrganization deberia ser" + updateEmployee.employeeID).isEqualTo(updateEmployee.employeeID);
+        assertThat(response.getStatusCode()).as("The answer should be 200 ").isEqualTo(200);
+        assertThat(response.getBody().jsonPath().getString("firstName"))
+                .as("The first name doesn't match")
+                .isEqualTo(updateEmployee.firstname);
+        assertThat(response.getBody().jsonPath().getString("lastName"))
+                .as("The last name doesn't match")
+                .isEqualTo(updateEmployee.lastname);
+        assertThat(response.getBody().jsonPath().getString("salary"))
+                .as("The salary doesn't match")
+                .isEqualTo(updateEmployee.newSalary.toString());
+        assertThat(response.getBody().jsonPath().getString("dependants"))
+                .as("The dependants don't match")
+                .isEqualTo(updateEmployee.dependencies.toString());
     }
 }

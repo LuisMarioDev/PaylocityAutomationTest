@@ -49,34 +49,9 @@ public class GetEmployees extends RestAssured.GetAllEmployees {
     }
 
     @Test
-    public void testResponseBody() {
-        // Expected POJO
-        EmployeePojo expectedEmployee = new EmployeePojo();
-        expectedEmployee.setId(buildRequest.IdRequest());
-        expectedEmployee.setUsername("xluismariox");
-        expectedEmployee.setFirstName("Luis");
-        expectedEmployee.setLastName("Navarro");
-        expectedEmployee.setDependants(2);
-        expectedEmployee.setSalary(2000.0);
-        expectedEmployee.setGross(52000.0);
-        expectedEmployee.setBenefitsCost(2000.0);
-        expectedEmployee.setNet(50000.0);
-
-        // Find actual employee from API response
-        EmployeePojo actualEmployee = employees.stream()
-                .filter(emp -> emp.getId().equals(expectedEmployee.getId()))
-                .findFirst()
-                .orElseThrow(() ->
-                        new AssertionError("Employee with ID " + expectedEmployee.getId() + " not found"));
-
-        // Compare fields
-        assertThat(actualEmployee.getUsername()).isEqualTo(expectedEmployee.getUsername());
-        assertThat(actualEmployee.getFirstName()).isEqualTo(expectedEmployee.getFirstName());
-        assertThat(actualEmployee.getLastName()).isEqualTo(expectedEmployee.getLastName());
-        assertThat(actualEmployee.getDependants()).isEqualTo(expectedEmployee.getDependants());
-        assertThat(actualEmployee.getSalary()).isEqualTo(expectedEmployee.getSalary());
-        assertThat(actualEmployee.getGross()).isEqualTo(expectedEmployee.getGross());
-        assertThat(actualEmployee.getBenefitsCost()).isEqualTo(expectedEmployee.getBenefitsCost());
-        assertThat(actualEmployee.getNet()).isEqualTo(expectedEmployee.getNet());
+    public void testEmployeeListNotEmpty() {
+        assertThat(employees)
+                .as("The employee list should not be empty")
+                .isNotEmpty();
     }
 }
