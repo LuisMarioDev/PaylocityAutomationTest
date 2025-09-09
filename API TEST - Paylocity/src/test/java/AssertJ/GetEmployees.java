@@ -9,15 +9,15 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class GetEmployee extends RestAssured.GetAllEmployees {
+public class GetEmployees extends RestAssured.GetAllEmployees {
 
-    private static GetEmployee buildRequest;
+    private static GetEmployees buildRequest;
     private static Response response;
     private static List<EmployeePojo> employees;
 
     @BeforeAll
     public static void setUp() {
-        buildRequest = new GetEmployee();
+        buildRequest = new GetEmployees();
         buildRequest.setup(); // Initialize base URL, headers, etc.
         response = buildRequest.buildRequest(); // GET /api/Employees
 
