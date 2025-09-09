@@ -1,4 +1,2 @@
-# PaylocityAutomationTest
-# PaylocityAutomationTest
-# PaylocityAutomationTest
-# PaylocityAutomationTest
+For the API testing you will see each action with and API endpoint request: PUT, POST, GET AND DELETE and an additional to delete all Employees. You can run the JSON testing in the test folder and you can run the request directly in the main java folder
+For the UI testing I created unit tests where you will be able to run each step.java code, with a unit test this will allow to automate the process and create a custom step, you will be able to see the locators xpath in each folder for example: DeleteLocators.java and this has the xpaths related to the delete elements locators.
