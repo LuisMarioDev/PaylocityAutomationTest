@@ -1,0 +1,25 @@
+pipeline {
+	agent any
+    stages {
+		stage('Preparación') {
+			steps {
+				echo 'Preparing environment...'
+            }
+        }
+        stage('Execute test') {
+			steps {
+				sh 'mvn clean test'
+            }
+        }
+        stage('Generate Allure Report') {
+			steps {
+				sh 'mvn allure:report'
+            }
+        }
+        stage('Show Allure Report') {
+			steps {
+				allure includeProperties: false, results: [[path: 'target/allure-results']]
+            }
+        }
+    }
+}

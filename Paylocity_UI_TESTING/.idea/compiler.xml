@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ui-testing-framework (1)" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ui-testing-framework" target="17" />
+      <module name="ui-testing-framework (10)" target="17" />
+      <module name="ui-testing-framework (11)" target="17" />
+      <module name="ui-testing-framework (12)" target="17" />
+      <module name="ui-testing-framework (13)" target="17" />
+      <module name="ui-testing-framework (14)" target="17" />
+      <module name="ui-testing-framework (15)" target="17" />
+      <module name="ui-testing-framework (16)" target="17" />
+      <module name="ui-testing-framework (17)" target="17" />
+      <module name="ui-testing-framework (18)" target="17" />
+      <module name="ui-testing-framework (2)" target="17" />
+      <module name="ui-testing-framework (3)" target="17" />
+      <module name="ui-testing-framework (4)" target="17" />
+      <module name="ui-testing-framework (5)" target="17" />
+      <module name="ui-testing-framework (6)" target="17" />
+      <module name="ui-testing-framework (7)" target="17" />
+      <module name="ui-testing-framework (8)" target="17" />
+      <module name="ui-testing-framework (9)" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
